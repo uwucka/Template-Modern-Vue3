@@ -15,6 +15,11 @@
 11. [Https](https://www.cloudflare.com/learning/ssl/what-is-https/)
 12. [GitHub Actions](https://github.com/FiloSottile/mkcert)
 
+
+## if you use YARN > 4.0.0
+
+yarn dlx @yarnpkg/sdks vscode
+
 ## To create certificates for https:
 
 1. Install [mkcert](https://github.com/FiloSottile/mkcert)
