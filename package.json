@@ -62,10 +62,5 @@
     "vue-eslint-parser": "^9.4.3",
     "vue-tsc": "^2.1.6"
   },
-  "packageManager": "yarn@4.0.2",
-  "lint-staged": {
-    "*.{js,ts,tsx,vue}": "eslint --fix",
-    "*.{css,scss,vue}": "stylelint --fix",
-    "*": "prettier -w -u"
-  }
+  "packageManager": "yarn@4.0.2"
 }
