@@ -10,8 +10,7 @@
     "lint:style": "stylelint 'src/**/*.{vue,scss,css}' --fix --ignore-path .gitignore",
     "lint:script": "eslint --ext .ts,vue --ignore-path .gitignore .",
     "lint:markup": "vue-tsc --noEmit",
-    "prepare": "husky install",
-    "pre-commit-lint": "yarn lint-staged",
+    "prepare": "husky",
     "cert": "rm -rf .cert && mkdir -p .cert && mkcert -key-file ./.cert/key.pem -cert-file ./.cert/cert.pem 'localhost'",
     "test": "jest"
   },
@@ -40,7 +39,7 @@
     "husky": "^9.1.5",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
-    "lint-staged": "^15.2.10",
+    "lint-staged": "^12.3.2",
     "postcss": "^8.4.45",
     "postcss-html": "^1.7.0",
     "postcss-scss": "^4.0.9",
@@ -63,5 +62,10 @@
     "vue-eslint-parser": "^9.4.3",
     "vue-tsc": "^2.1.6"
   },
-  "packageManager": "yarn@4.0.2"
+  "packageManager": "yarn@4.0.2",
+  "lint-staged": {
+    "*.{js,ts,tsx,vue}": "eslint --fix",
+    "*.{css,scss,vue}": "stylelint --fix",
+    "*": "prettier -w -u"
+  }
 }
